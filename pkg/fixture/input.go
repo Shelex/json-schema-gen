@@ -76,22 +76,18 @@ func read(path string, os afero.Afero) (File, error) {
 }
 
 func overwrite(prompt prompt.Executor) (bool, string, error) {
-	confirmOverwrite, err := prompt.Confirm("Schema already exist. Overwrite file")
+	confirmOverwrite, err := prompt.Confirm("File already exist. Overwrite file")
 	if err != nil {
 		return false, "", err
 	}
 	if confirmOverwrite {
 		return true, "", nil
 	}
-	newName, err := prompt.Input("Please enter new schema file name")
+	newName, err := prompt.Input("Please enter file name for schema")
 	if err != nil {
 		return false, "", err
 	}
 	return false, newName, nil
-}
-
-func askForRemoval(prompt prompt.Executor) (bool, error) {
-	return prompt.Confirm("Should remove initial json file?")
 }
 
 // Validate - all text inputs to avoid dots and dashes

@@ -10,7 +10,7 @@ CLI utility for generating JSON Schema from json file
 
 ## How to use as binary
 
-1. Go to [releases](https://github.com/Sheex/json-schema-gen/releases) section
+1. Go to [releases](https://github.com/Shelex/json-schema-gen/releases) section
 2. Download `json-schema-gen_%Version%_%OS_Specific%`
 3. Unzip to `cypress/scripts` and rename to `qa-json-schema-generator` as VS Code cypress extension command `generate json schema` relies on path
 4. Execute `cypress/scripts/qa-json-schema-generator` from command line OR enable `Cypress: Generate JSON Schema` in case VS Code Cypress extension is used.
